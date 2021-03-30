@@ -1,14 +1,20 @@
 {
+    "compileOnSave": true,
     "compilerOptions": {
-        "target": "es6",
+        "baseUrl": "./",
         "module": "commonjs",
-        "outDir": "dist",
+        "outDir": "dist/out-tsc",
+        "mapRoot": "dist/out-tsc/",
+        "sourceMap": true,
         "moduleResolution": "node",
-        "inlineSourceMap": true,
         "declaration": false,
         "noImplicitAny": false,
         "allowSyntheticDefaultImports": true,
-        "resolveJsonModule": true
+        "resolveJsonModule": true,
+        "target": "ES6",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
     },
     "exclude": [
       "../node_modules",
