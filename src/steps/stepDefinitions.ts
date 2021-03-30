@@ -23,7 +23,7 @@ Then(/^The page should be accessible$/, {timeout: 60*1000 }, async function() {
     // wcag2a, wcag2aa, wcag21a, wcag21aa, wcag***
     // ACT, section508, section508.*.*, experimental, cat.*
     let results = await new axe(browser.driver)
-        //.withTags(['wcag21aa','wcag21a','wcag2a'])
+        .withTags(['wcag21aa','wcag21a','wcag2a'])
         .analyze();
 
     expect(results.violations.length).to.be.equal(
