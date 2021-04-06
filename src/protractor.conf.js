@@ -9,7 +9,8 @@ exports.config = {
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     // Require feature files
     specs: [
-        './features/**/*.feature', // accepts a glob
+        // './features/**/*.feature', // accepts a glob
+        './features/angular.feature',
     ],
     // Run chrome browser in headless mode, disable gpu as it
     // doesn't help in our case
