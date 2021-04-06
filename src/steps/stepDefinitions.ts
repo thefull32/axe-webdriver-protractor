@@ -23,13 +23,8 @@ Given(/^Navigate to non-angular page (.*)$/, {timeout: 60*1000 }, async function
 */
 Then(/^The page should be accessible$/, {timeout: 60*1000 }, async function() {
 
-    // let results = await new axe(browser.driver)
-    //     .withTags(['wcag21aa','wcag21a','wcag2a'])
-    //     .disableRules('color-contrast')
-    //     .analyze();
-
     let results = await new axe(browser.driver)
-        .configure(GOOD).analyze();
+        .configure(BEST).analyze();
 
     let summary:string = ""
     for (var i =0; i < results.violations.length; i++) {
